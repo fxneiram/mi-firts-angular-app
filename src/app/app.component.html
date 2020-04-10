@@ -1,0 +1,28 @@
+<!--ALTERNATIVA 1-->
+<div id="movies_all_cards" class="row">
+    <div *ngFor="let item of peliculas; index as i" class="col-sm-3">
+        <div class="card">
+            <img class="card-img-top" src="{{item.img}}" alt="Card image" style="max-height: 247px !important;">
+            <div class="card-body">
+                <h4 class="card-title">{{item.movie_name}}</h4>
+                <p class="card-text">{{item.anio}}</p>
+                <a href="/details/{{i}}" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>ejemplo 2</h1>
+<hr>
+<div class="row">
+    <div *ngFor="let empleado of empleados" class="col-md-3">
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">{{empleado.employee_name}}</h4>
+                <p class="card-text">{{empleado.employee_salary | currency}}</p>
+                <a href="/detail_empleyee/{{empleado.id}}" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+    </div>
+</div>
